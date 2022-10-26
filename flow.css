@@ -1,0 +1,27 @@
+.fill {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250px;
+  margin: auto;
+  width: fit-content;
+  -webkit-text-fill-color: #fff;
+  -webkit-text-stroke: 1px #777;
+  position: relative;
+}
+.fill::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.6s;
+  overflow: hidden;
+  width: 0;
+}
+.fill:hover::after {
+  width: 100%;
+  -webkit-text-fill-color: red;
+}
+
+/* .fill:hover::after {
+  width: 52%;
+  -webkit-text-fill-color: red;
+} */
